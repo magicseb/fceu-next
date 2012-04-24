@@ -16,7 +16,7 @@ typedef unsigned char bool;
 
 #define LIBRETRO_CORE 1
 
-#if defined(_MSC_VER) && defined(LIBRETRO_CORE)
+#if defined(_MSC_VER) && !defined(_XBOX)
 #define EXPORT __declspec(dllexport)
 #else
 #define EXPORT

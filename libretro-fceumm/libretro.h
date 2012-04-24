@@ -7,9 +7,14 @@
 #ifdef __cplusplus
 extern "C" {
 #else
+#if defined(_MSC_VER) && !defined(__cplusplus)
+#define bool unsigned char
+#define true 1
+#define false 0
+#else
 #include <stdbool.h>
 #endif
-
+#endif
 #define RETRO_API_VERSION         1
 
 #define RETRO_DEVICE_MASK         0xff

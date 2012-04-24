@@ -3,17 +3,11 @@
 
 #include <stddef.h>
 #include <stdint.h>
-#ifndef _MSC_VER
-#include <stdbool.h>
-#else
-#define TRUE 1
-#define FALSE 0
-typedef unsigned char bool;
-#endif
+
 
 typedef struct memstream memstream_t;
 
-memstream_t *memstream_open(bool writing);
+memstream_t *memstream_open();
 void memstream_close(memstream_t *stream);
 
 size_t memstream_read(memstream_t *stream, void *data, size_t bytes);
